@@ -5,7 +5,7 @@ def Withdraw_function():
       Withdraw = input("Enter the amount you would like to withdraw: ")
       try:
          if int(ops.get_balance()) < int(Withdraw):
-            print("Text")
+            print("Error1")
             quit()
       except:
          print("Not enough money")
