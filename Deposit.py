@@ -10,7 +10,7 @@ if operation ==1: #what will be the operation #?
         print("Error, please enter numeric value")
         quit()
     try:
-        if deposit % 5 == 0 or deposit % 10 == 0 or deposit % 20 == 0 or deposit % 50 == 0 or deposit % 100 == 0:
+        if deposit % 5 == 0:
             ops.balance +=deposit
         else:
             raise ValueError("Invalid value")
