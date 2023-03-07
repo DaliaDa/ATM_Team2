@@ -4,3 +4,5 @@ def get_balance():
 
 def deposit(amount):
     return (amount)
+def withdraw(amount):
+    return (amount)
