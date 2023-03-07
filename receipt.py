@@ -1,3 +1,4 @@
+import Operations as ops
 yes_or_not = input("Do you want a receipt? (Y/N): ")
 if yes_or_not == "N":
    print("Go back.");
@@ -10,11 +11,11 @@ else:
 
    options(variants)
 
-   lang=input("Please, choose an option. Enter a number: ")
+   lang = input("Please, choose an option. Enter a number: ")
 
    match lang:
       case"1":
-         print("This is your receipt.")
+         print(f"Your  balance is EUR {ops.get_balance()}")
 
       case"2":
          print("Take your receipt.")
