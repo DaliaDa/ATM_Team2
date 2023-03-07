@@ -1,5 +1,4 @@
 
-
 id1="Janis123"
 pin1=int(1234)
 balance = 378
@@ -30,7 +29,7 @@ match lang:
         if pinbool == False:
             print("Please contact the bank. \n")
         else:
-            print("Continue")
+            print("Choose what action you would like to preform, by pressing the correct number.")
 
 
 
