@@ -1,11 +1,11 @@
-# import Deposit
-# import Operations
+#import Deposit as dep
+import Operations as ops
 # import Dalia_withdraw
 # import receipt
 
 
-pin1=int(1234)
-balance = 378
+pin1 = ops.get_pin()
+balance = ops.get_balance()
 
 def pincheck(checkp, realp): # function that checks pin code
     times = int(0)
@@ -33,12 +33,14 @@ match lang:
         if pinbool == False:
             print("Please contact the bank. \n")
         else:
-            print("Choose what action you would like to preform, by pressing the correct number.")
-            print("(1)Deposit\t (2) Withdraw")
+            print("Choose what action you would like to preform, by pressing the correct letter.")
+            print("(D)Deposit\t (W) Withdraw")
             dowhat = input()
             match dowhat:
-                case "1":
-                case "2":
+                case "D":
+                    print("Deposit")
+                case "W":
+                    print("Withdraw")
 
 
 
