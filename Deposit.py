@@ -11,7 +11,7 @@ if operation ==1: #what will be the operation #?
         quit()
     try:
         if deposit % 5 == 0 or deposit % 10 == 0 or deposit % 20 == 0 or deposit % 50 == 0 or deposit % 100 == 0:
-            print("All Ok")
+            ops.balance +=deposit
         else:
             raise ValueError("Invalid value")
     except ValueError:
@@ -21,8 +21,8 @@ if operation ==1: #what will be the operation #?
     ops.deposit(deposit)
     print(
         f"You have deposited EUR {amount_deposit} to your account. Your new balance is EUR"
-        f" {ops.get_balance() + deposit}")
+        f" {ops.get_balance()}")
 
-print(ops.get_balance()) #Still has problems with this amount as this is inital 100 form ops file....
+print(ops.get_balance())
 
 

@@ -1,5 +1,6 @@
+balance = 100
 def get_balance():
-    return 100
+    return balance
 
 def deposit(amount):
     return (amount)
