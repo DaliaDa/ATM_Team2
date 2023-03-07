@@ -23,6 +23,5 @@ if operation ==1: #what will be the operation #?
         f"You have deposited EUR {amount_deposit} to your account. Your new balance is EUR"
         f" {ops.get_balance()}")
 
-print(ops.get_balance())
 
 
