@@ -1,8 +1,7 @@
 import Operations as ops
 # remove while boop
 def pinchange():
-    operation = 1
-    while operation == 1:
+        operation = 0
         newpin = input("Please enter your new pin using only 4 numeric values: ")
         try:
             newpin = int(newpin)
@@ -15,8 +14,7 @@ def pinchange():
                     if newpin == newpin1:
                         ops.pincode = newpin
                         print("Your pin has been successfully changed.")
-                        operation = 2
-                        break  # exit while loop
+                        return
                     else:
                         operation = input("The pin entered does not match the previously entered value. You'll have to perform the entire process again. If you would like to do so please enter 1, if not, enter whatever.")
                         try:
@@ -42,4 +40,4 @@ def pinchange():
             except ValueError:
                 return
 
-pinchange()
+

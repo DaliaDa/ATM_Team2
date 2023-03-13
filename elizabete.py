@@ -37,7 +37,7 @@ match lang:
             process = 1
             while process == 1:
                 print("Choose what action you would like to preform, by pressing the correct letter.")
-                print("(D)Deposit\t (W) Withdraw\t (R)Receipt\t (B)Balance\t (P)Change PIN")
+                print("(D)Deposit\t (W) Withdraw\t (R)Receipt\t (B)Balance\t (C)Change PIN\t (E)Exit")
                 dowhat = input()
                 dowhat = dowhat.upper()
                 match dowhat:
@@ -88,10 +88,22 @@ match lang:
                                 quit()
                         except:
                             quit()
-                    case "P":
+                    case "C":
                         pin1 = ops.get_pin()
                         pincompare = int(input("Please enter your PIN: ")) # Pin check
                         pinbool = pincheck(pincompare, pin1)
-
+                        from pin_change import pinchange
+                        pinchange()
+                        process = input("If you would like to preform another operation, press 1. If not, enter whatever.")
+                        try:
+                            process = int(process)
+                            if process ==1:
+                                continue
+                            else:
+                                quit()
+                        except:
+                            quit()
+                    case "E":
+                        quit()
     case "2":
         print("Sveiki!\n")
